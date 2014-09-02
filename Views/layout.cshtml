@@ -16,7 +16,7 @@
     /* Inserting some ad hoc shapes
     ***************************************************************/
 
-    WorkContext.Layout.Footer.Add(New.BadgeOfHonor(), "5"); // Powered by Orchard
+   // WorkContext.Layout.Footer.Add(New.BadgeOfHonor(), "5"); // Powered by Orchard
     WorkContext.Layout.Footer.Add(New.User(), "10"); // Login and dashboard links
 
     /* Last bit of code to prep the layout wrapper
@@ -25,6 +25,8 @@
     Model.Id = "layout-wrapper";
     var tag = Tag(Model, "div"); // using Tag so the layout div gets the classes, id and other attributes added to the Model
 }
+
+@tag.StartElement
 
 <div class="container">
     <div class="row">
@@ -77,13 +79,17 @@
                 </div>
             </div>
         </div>
-    </div>    
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            @Display(Model.Footer)
-        </div>
     </div>
 </div>
+
+<div id="layout-footer" class="group">
+    <footer id="footer">      
+        @if (Model.Footer != null)
+        {
+            <div id="footer-sig" class="group">
+                @Display(Model.Footer)
+            </div>
+        }
+    </footer>
+</div>
+@tag.EndElement
