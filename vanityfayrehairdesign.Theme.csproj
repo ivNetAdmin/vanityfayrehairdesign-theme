@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CB4B0F04-45EA-47FE-9BC4-AF6BAEC2C526}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>vanityfayrehairdesign.Theme</RootNamespace>
+    <AssemblyName>vanityfayrehairdesign.Theme</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\aspnetmvc\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\carosel.js" />
+    <Content Include="Scripts\html5shiv.js" />
+    <Content Include="Scripts\jquery-1.11.0.js" />
+    <Content Include="Scripts\jquery-1.11.1.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Web.config" />
+    <Content Include="Styles\accordian.min.css" />
+    <Content Include="Styles\bootstrap.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\font-awesome-ie7.min.css" />
+    <Content Include="Styles\font-awesome.min.css" />
+    <Content Include="Styles\site.css" />
+    <Content Include="Styles\site.min.css" />
+    <Content Include="Styles\variables.css" />
+    <Content Include="Styles\variables.min.css" />
+    <Content Include="Styles\Web.config" />
+    <Content Include="Web.config" />
+    <Content Include="Content\Web.config" />
+    <Content Include="Theme.txt" />
+    <Content Include="Theme.png" />
+    <Content Include="Placement.info" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Orchard.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Orchard.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Orchard.Framework">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Orchard.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\.csscomb.json" />
+    <Content Include="Styles\.csslintrc" />
+    <Content Include="Styles\accordian.less" />
+    <Content Include="Styles\alerts.less" />
+    <Content Include="Styles\badges.less" />
+    <Content Include="Styles\bootstrap.css.map" />
+    <Content Include="Styles\bootstrap.less" />
+    <Content Include="Styles\breadcrumbs.less" />
+    <Content Include="Styles\button-groups.less" />
+    <Content Include="Styles\buttons.less" />
+    <Content Include="Styles\carousel.less" />
+    <Content Include="Styles\close.less" />
+    <Content Include="Styles\code.less" />
+    <Content Include="Styles\component-animations.less" />
+    <Content Include="Styles\dropdowns.less" />
+    <Content Include="Styles\forms.less" />
+    <Content Include="Styles\glyphicons.less" />
+    <Content Include="Styles\grid.less" />
+    <Content Include="Styles\input-groups.less" />
+    <Content Include="Styles\jumbotron.less" />
+    <Content Include="Styles\labels.less" />
+    <Content Include="Styles\list-group.less" />
+    <Content Include="Styles\media.less" />
+    <Content Include="Styles\mixins.less" />
+    <Content Include="Styles\mixins\alerts.less" />
+    <Content Include="Styles\mixins\background-variant.less" />
+    <Content Include="Styles\mixins\border-radius.less" />
+    <Content Include="Styles\mixins\buttons.less" />
+    <Content Include="Styles\mixins\center-block.less" />
+    <Content Include="Styles\mixins\clearfix.less" />
+    <Content Include="Styles\mixins\forms.less" />
+    <Content Include="Styles\mixins\gradients.less" />
+    <Content Include="Styles\mixins\grid-framework.less" />
+    <Content Include="Styles\mixins\grid.less" />
+    <Content Include="Styles\mixins\hide-text.less" />
+    <Content Include="Styles\mixins\image.less" />
+    <Content Include="Styles\mixins\labels.less" />
+    <Content Include="Styles\mixins\list-group.less" />
+    <Content Include="Styles\mixins\nav-divider.less" />
+    <Content Include="Styles\mixins\nav-vertical-align.less" />
+    <Content Include="Styles\mixins\opacity.less" />
+    <Content Include="Styles\mixins\pagination.less" />
+    <Content Include="Styles\mixins\panels.less" />
+    <Content Include="Styles\mixins\progress-bar.less" />
+    <Content Include="Styles\mixins\reset-filter.less" />
+    <Content Include="Styles\mixins\resize.less" />
+    <Content Include="Styles\mixins\responsive-visibility.less" />
+    <Content Include="Styles\mixins\size.less" />
+    <Content Include="Styles\mixins\tab-focus.less" />
+    <Content Include="Styles\mixins\table-row.less" />
+    <Content Include="Styles\mixins\text-emphasis.less" />
+    <Content Include="Styles\mixins\text-overflow.less" />
+    <Content Include="Styles\mixins\vendor-prefixes.less" />
+    <Content Include="Styles\modals.less" />
+    <Content Include="Styles\navbar.less" />
+    <Content Include="Styles\navs.less" />
+    <Content Include="Styles\normalize.less" />
+    <Content Include="Styles\pager.less" />
+    <Content Include="Styles\pagination.less" />
+    <Content Include="Styles\panels.less" />
+    <Content Include="Styles\popovers.less" />
+    <Content Include="Styles\print.less" />
+    <Content Include="Styles\progress-bars.less" />
+    <Content Include="Styles\responsive-embed.less" />
+    <Content Include="Styles\responsive-utilities.less" />
+    <Content Include="Styles\scaffolding.less" />
+    <Content Include="Styles\site.css.map" />
+    <Content Include="Styles\site.less" />
+    <Content Include="Styles\tables.less" />
+    <Content Include="Styles\theme.less" />
+    <Content Include="Styles\thumbnails.less" />
+    <Content Include="Styles\tooltip.less" />
+    <Content Include="Styles\type.less" />
+    <Content Include="Styles\utilities.less" />
+    <Content Include="Styles\variables.less" />
+    <Content Include="Styles\wells.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Document.cshtml" />
+    <Content Include="Views\layout.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" DependsOnTargets="AfterBuildCompiler">
+    <PropertyGroup>
+      <AreasManifestDir>$(ProjectDir)\..\Manifests</AreasManifestDir>
+    </PropertyGroup>
+    <!-- If this is an area child project, uncomment the following line:
+    <CreateAreaManifest AreaName="$(AssemblyName)" AreaType="Child" AreaPath="$(ProjectDir)" ManifestPath="$(AreasManifestDir)" ContentFiles="@(Content)" />
+    -->
+    <!-- If this is an area parent project, uncomment the following lines:
+    <CreateAreaManifest AreaName="$(AssemblyName)" AreaType="Parent" AreaPath="$(ProjectDir)" ManifestPath="$(AreasManifestDir)" ContentFiles="@(Content)" />
+    <CopyAreaManifests ManifestPath="$(AreasManifestDir)" CrossCopy="false" RenameViews="true" />
+    -->
+  </Target>
+  <Target Name="AfterBuildCompiler" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>45979</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://orchard.codeplex.com</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,6 @@
+Name: vanityfayrehairdesign.Theme
+Author: ivNet ltd
+Description: Theme based on Bootstrap http://www.tutorialspoint.com/bootstrap/bootstrap_environment_setup.htm
+Tags: bootstramp, ivnet
+Website: http://www.ivnet.co.uk
+Zones: Header, Navigation, Featured, BeforeMain, AsideFirst, Messages, BeforeContent, Content, AfterContent, AsideSecond, AfterMain, TripelFirst, TripelSecond, TripelThird, FooterQuadFirst, FooterQuadSecond, FooterQuadThird, FooterQuadFourth, Footer
