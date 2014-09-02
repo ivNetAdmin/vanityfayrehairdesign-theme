@@ -16,7 +16,7 @@
     /* Inserting some ad hoc shapes
     ***************************************************************/
 
-   // WorkContext.Layout.Footer.Add(New.BadgeOfHonor(), "5"); // Powered by Orchard
+    // WorkContext.Layout.Footer.Add(New.BadgeOfHonor(), "5"); // Powered by Orchard
     WorkContext.Layout.Footer.Add(New.User(), "10"); // Login and dashboard links
 
     /* Last bit of code to prep the layout wrapper
@@ -30,13 +30,24 @@
 
 <div class="container">
     <div class="row">
+        @if (Model.AfterContent != null)
+        {
+            <div id="content" class="group">
+                @Display(Model.AfterContent)
+            </div>
+        }
+    </div>
+</div>
+
+@*<div class="container">
+    <div class="row">
         <div class="content">
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                Suzuki
+                                About
                             </a>
                         </h4>
 
@@ -51,7 +62,7 @@
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                Chevrolet
+                                Services
                             </a>
                         </h4>
 
@@ -66,7 +77,7 @@
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                Volvo
+                                Reviews
                             </a>
                         </h4>
 
@@ -77,13 +88,29 @@
                         </div>
                     </div>
                 </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                Contact
+                            </a>
+                        </h4>
+
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <img src="http://files.conceptcarz.com/img/Volvo/2009_Volvo_S60_Concept-Image-01-800.jpg" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
-</div>
+</div>*@
 
 <div id="layout-footer" class="group">
-    <footer id="footer">      
+    <footer id="footer">
         @if (Model.Footer != null)
         {
             <div id="footer-sig" class="group">

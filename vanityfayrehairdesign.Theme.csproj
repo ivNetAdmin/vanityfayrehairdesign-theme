@@ -139,6 +139,7 @@
     <Content Include="Styles\Theme.less" />
     <Content Include="Styles\Theme.min.css" />
     <Content Include="Styles\Web.config" />
+    <Content Include="Views\Layout.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Content\Web.config" />
     <Content Include="Theme.txt" />
@@ -156,10 +157,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\layout.cshtml" />
+    <Compile Include="ResourceManifest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ResourceManifest.cs" />
+    <Content Include="Views\Widget-Name-AccordianMenu.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

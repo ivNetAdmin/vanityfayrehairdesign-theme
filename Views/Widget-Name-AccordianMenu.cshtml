@@ -1,0 +1,34 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="content">
+            <div class="panel-group" id="accordion">
+                @{
+                    foreach (var shape in Model.Content.Items[1].Items)
+                    {
+                        var shapeContent = shape.Content;
+                        
+
+                        foreach (var item in shapeContent.Items)
+                        {
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                            @item.ContentItem.Id
+                                        </a>
+                                    </h4>
+
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <img src="http://files.conceptcarz.com/img/Suzuki/suzuki-concept-kizashi-3-2008-01-800.jpg" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
