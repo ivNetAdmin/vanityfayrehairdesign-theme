@@ -80,6 +80,19 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
     position: absolute;
 }
 
+
+.panel-group img#locationMap {
+    -webkit-transform: none;    
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+    width: 368px;
+    height: 368px;
+    margin: 0;
+    position: relative;
+}
+
+
 div#layout-navigation.group>div.zone.zone-navigation>article.widget-navigation.widget-menu-widget.widget {
  /* position: relative; */
 /* min-height: 50px; */
