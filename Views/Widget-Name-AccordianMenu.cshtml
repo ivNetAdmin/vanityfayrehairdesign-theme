@@ -1,13 +1,12 @@
-﻿@using System.Web.UI.WebControls
-@using Orchard.ContentManagement
-<div class="container">
+﻿<div class="container">
     <div class="row">
         <div class="content">
             <div class="panel-group" id="accordion">
                 @{
+                    var showFirst = "in";
                     foreach (var item in Model.Content.Items[1].Items)
                     {
-                        IEnumerable<ContentField> fields = null;
+                        IEnumerable<Orchard.ContentManagement.ContentField> fields = null;
                         var title = string.Empty;
                         var htmlString = string.Empty;
                         var id = 0;
@@ -36,22 +35,29 @@
                             }
                         }
 
+                        if (htmlString.Contains("iframe"))
+                        {
+                            htmlString = htmlString.Replace("<p>", "").Replace("</p>", "");
+                        }
+                                                
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapse-@id">
-                                       @title
+                                        @title
                                     </a>
                                 </h4>
 
                             </div>
-                            <div id="collapse-@id" class="panel-collapse collapse in">
+                            <div id="collapse-@id" class="panel-collapse collapse @showFirst">
                                 <div class="panel-body">
-                                    <div class="panel-text">@htmlString</div>                                
+                                    <div class="panel-text">@Html.Raw(HttpUtility.HtmlDecode(htmlString))</div>                                
                                     <img src="@url" />
                                 </div>
                             </div>
                         </div>
+
+                        showFirst = "";
                     }
                 }
             </div>

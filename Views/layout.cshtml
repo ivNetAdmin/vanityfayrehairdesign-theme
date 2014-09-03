@@ -28,6 +28,15 @@
 
 @tag.StartElement
 
+@if (Model.Header != null)
+{
+    <header id="layout-header" class="group">
+        <div id="header">
+            @Display(Model.Header)
+        </div>
+    </header>
+}
+
 <div class="container">
     <div class="row">
         @if (Model.AfterContent != null)
