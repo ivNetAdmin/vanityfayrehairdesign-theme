@@ -1,31 +1,57 @@
-﻿<div class="container">
+﻿@using System.Web.UI.WebControls
+@using Orchard.ContentManagement
+<div class="container">
     <div class="row">
         <div class="content">
             <div class="panel-group" id="accordion">
                 @{
-                    foreach (var shape in Model.Content.Items[1].Items)
+                    foreach (var item in Model.Content.Items[1].Items)
                     {
-                        var shapeContent = shape.Content;
+                        IEnumerable<ContentField> fields = null;
+                        var title = string.Empty;
+                        var htmlString = string.Empty;
+                        var id = 0;
+                        var url = string.Empty;
                         
-
-                        foreach (var item in shapeContent.Items)
+                        foreach (var part in item.ContentItem.Parts)
                         {
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                            @item.ContentItem.Id
-                                        </a>
-                                    </h4>
+                            string partName = part.ToString();
+                            switch (partName)
+                            {
+                                case "Orchard.Core.Title.Models.TitlePart":
+                                    title = ((Orchard.Core.Title.Models.TitlePart) part).Title;
+                                    id = ((Orchard.Core.Title.Models.TitlePart) part).Id;                              
+                                    break;
+                                case "Orchard.Core.Common.Models.BodyPart":
+                                    htmlString = ((Orchard.Core.Common.Models.BodyPart)part).Text;
+                                    break;
+                                case "Orchard.ContentManagement.ContentPart":
+                                    fields = ((Orchard.ContentManagement.ContentPart) part).Fields;
+                                    foreach (var contentField in fields.Where(contentField => contentField.Name == "Image"))
+                                    {
+                                        var mediaParts = ((Orchard.MediaLibrary.Fields.MediaLibraryPickerField) contentField).MediaParts.ToList();
+                                        url = mediaParts[0].MediaUrl;
+                                    }
+                                    break;
+                            }
+                        }
 
-                                </div>
-                                <div id="collapseOne" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        <img src="http://files.conceptcarz.com/img/Suzuki/suzuki-concept-kizashi-3-2008-01-800.jpg" />
-                                    </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-@id">
+                                       @title
+                                    </a>
+                                </h4>
+
+                            </div>
+                            <div id="collapse-@id" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div class="panel-text">@htmlString</div>                                
+                                    <img src="@url" />
                                 </div>
                             </div>
-                        }
+                        </div>
                     }
                 }
             </div>

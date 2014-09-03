@@ -47,6 +47,26 @@
     transform: translateX(-100%) rotate(90deg);
     transform-origin: right top;
 }
+
+.panel-text {
+
+/* Safari */
+-webkit-transform: rotate(-90deg);
+
+/* Firefox */
+-moz-transform: rotate(-90deg);
+
+/* IE */
+-ms-transform: rotate(-90deg);
+
+/* Opera */
+-o-transform: rotate(-90deg);
+
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+}
+
 .panel-group .panel img {
     width: 396px;
     height: 600px;
