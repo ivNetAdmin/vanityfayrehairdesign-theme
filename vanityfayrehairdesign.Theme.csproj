@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bg.png" />
+    <Content Include="Content\vfLogo.png" />
     <Content Include="Scripts\Bootstrap\affix.js" />
     <Content Include="Scripts\Bootstrap\alert.js" />
     <Content Include="Scripts\Bootstrap\bootstrap.min.js" />
